@@ -1,5 +1,5 @@
 require("plenary.reload").reload_module("gruvbox", true)
-local gruvbox = require("gruvbox")
+local gruvbox = require("theme")
 local default = gruvbox.config
 
 local function clear_term_colors()
@@ -148,7 +148,7 @@ describe("tests", function()
     gruvbox.load()
 
     -- dark bg
-    local colors = require("gruvbox").palette
+    local colors = require("theme").palette
     vim.opt.background = "dark"
     assert.are.same(vim.g.terminal_color_0, colors.dark0)
 
